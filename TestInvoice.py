@@ -25,3 +25,12 @@ def test_CanCalculateTotalDiscount(invoice, products):
 def test_CanCalculateTotalPurerice(invoice, products):
     invoice.totalPurePrice(products)
     assert invoice.totalPurePrice(products) == 69.38
+
+def test_CanCaluclateTax(invoice, products):
+    invoice.tax(products)
+    assert invoice.tax(products) == 4.86
+
+
+def test_CanCalculatePriceWithTax(invoice, products):
+    invoice.taxPrice(products)
+    assert invoice.taxPrice(products) == 74.24

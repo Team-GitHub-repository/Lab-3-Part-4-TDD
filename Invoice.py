@@ -44,3 +44,12 @@ class Invoice:
                 continue
             else:
                 return userInput
+
+    def tax(self, products):
+        pure_price_tax = self.totalPurePrice(products) * 0.07
+        return round(pure_price_tax, 2)
+
+    def taxPrice(self, products):
+        price_with_tax = self.tax(products) + self.totalPurePrice(products)
+        return price_with_tax
+

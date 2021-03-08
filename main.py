@@ -15,7 +15,11 @@ while True:
         break
 
 total_amount = Invoice().totalPurePrice(products)
+tax_amount = Invoice().tax(products)
+tax_price = Invoice().taxPrice(products)
 
 print("Your total pure price is: ", total_amount)
+print("Your tax is: ", tax_amount)
+print("Your total price with tax is: ", round(tax_price, 2))
 
 #Hello World
